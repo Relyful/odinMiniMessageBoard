@@ -1,2 +1,2 @@
 # odinMiniMessageBoard
-A simple mini message board using express.
+A simple mini message board using Express.
