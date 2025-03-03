@@ -5,5 +5,17 @@
   </head>
   <body>
     <h1>Hello Express</h1>
+
+    <div class="messages">
+      <% messages.forEach((message) => { %>
+        <!-- <%= message.user %>
+        <br>
+        <%= message.text %>
+        <br>
+        <%= message.added %>
+        <br> -->
+        <%- include('message', {user: message.user, text: message.text, added: message.added}); %>
+      <% }); %>
+    </div>
   </body>
 </html>
