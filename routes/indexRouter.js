@@ -24,6 +24,7 @@ indexRouter.get('/new', (req, res) => {
   res.render('form');
 });
 indexRouter.post('/new', (req, res) => {
+  console.log(req.body);
   
 })
 
