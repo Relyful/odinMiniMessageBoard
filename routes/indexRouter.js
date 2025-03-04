@@ -18,11 +18,17 @@ const messages = [
 const indexRouter = Router();
 
 indexRouter.get("/", (req, res) => {
-  res.render("index", { messages: messages});
+  res.render("index", { messages });
 });
 indexRouter.get('/new', (req, res) => {
   res.render('form');
 });
+indexRouter.get("/messageDet/:user/:text/:added", (req, res) => {
+  console.log(req.params);
+  const {user, text, added} = req.params;
+  res.render("messageDetails", { user, text, added});
+})
+
 indexRouter.post('/new', (req, res) => {
   console.log(req.body);
   const newMes = req.body;
