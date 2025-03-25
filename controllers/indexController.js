@@ -10,3 +10,20 @@ exports.indexGet = async (req, res) => {
   }));
   res.render("index", { messages });
 };
+
+exports.newPost = async (req, res) => {
+  console.log(req);
+  const newMes = req.body;
+  db.postNewMessage(newMes.username, newMes.text);
+  res.redirect("/");
+}
+
+exports.getMessage = async (req, res) => {
+  console.log(req.params);
+  const {user, text, added} = req.params;
+  res.render("messageDetails", { user, text, added});
+};
+
+exports.getNew = async (req, res) => {
+  res.render('form');
+};
