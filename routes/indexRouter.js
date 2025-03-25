@@ -1,5 +1,6 @@
 const { Router } = require('express');
-const { format } = require('date-fns')
+const { format } = require('date-fns');
+const controller = require("../controllers/indexController");
 
 const messages = [
   {
@@ -17,9 +18,7 @@ const messages = [
 
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
-  res.render("index", { messages });
-});
+indexRouter.get("/", controller.indexGet);
 indexRouter.get('/new', (req, res) => {
   res.render('form');
 });

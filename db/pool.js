@@ -3,8 +3,8 @@ require("dotenv").config();
 
 module.exports = new Pool({
   host: process.env.HOST,
-  user: process.env.USER,
+  user: process.env.PGUSER,
   database: process.env.DATABASE,
-  password: process.env.PASSWORD1,
+  password: process.env.PASSWORD,
   port: process.env.DBPORT,
 })

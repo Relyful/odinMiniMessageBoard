@@ -8,7 +8,7 @@
 
     <div class="messages">
       <% messages.forEach((message) => { %>
-        <%- include('message', {user: message.user, text: message.text, added: message.added}); %>
+        <%- include('message', {user: message.username, text: message.text, added: message.added}); %>
       <% }); %>
     </div>
     <br>
