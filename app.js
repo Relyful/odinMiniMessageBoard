@@ -3,7 +3,7 @@ const path = require('path');
 const indexRouter = require("./routes/indexRouter");
 require('dotenv').config();
 
-const PORT = 8080;
+const PORT = process.env.PORT;
 const app = express();
 
 app.set("views", path.join(__dirname, "views"));
@@ -19,6 +19,6 @@ app.use((err, req, res, next) => {
   res.status(err.statusCode || 500).send(err.message);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || 8080, () => {
   console.log(`Welcome to your server, listening on ${PORT}.`);  
 });
