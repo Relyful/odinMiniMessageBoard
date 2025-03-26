@@ -17,7 +17,8 @@ VALUES
   ('hiq', 'hi', '2025-03-05 14:30:00'),
   ('CB', 'Good job!', '2025-03-06 14:30:00'),
   ('MD Munna Hasan Leon', '741348', '2025-03-06 14:30:00'),
-  ('h', 'mr robot', '2025-03-07 14:30:00');
+  ('h', 'mr robot', '2025-03-07 14:30:00'),
+  ('RelyDB', 'We on remote DB now bros!', '2025-03-25 20:30:06')
 `;
 
 async function main() {
